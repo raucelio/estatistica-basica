@@ -118,8 +118,8 @@ jpeg("capa3.jpeg",bg="transparent")
 par(bg="red")
 plot (x, dnorm(x), type="h", lwd=2, col="white", axes=FALSE , xlab="", ylab="", bty="n")
 dev.off()
-par(old)
-#
+
+# Altura dos homens
 
 par(mar=c(2, 4, 4, 2) + 0.1)
 
@@ -225,7 +225,7 @@ library(MASS)
 
 jpeg("gr_boxplot1.jpeg", bg="transparent")
 a<-boxplot (iris$Sepal.Width, pch=16 ,  lwd = 2, xlab = "X")
-text (1.4,c(a$stats, a$out), c( "min", "1? Q", "mediana","3? Q", "max", "out", "out", "out", "out"), cex = 0.8)
+text (1.4,c(a$stats, a$out), c( "min", "1º Q", "mediana","3º Q", "max", "out", "out", "out", "out"), cex = 0.8)
 arrows (1.3, c(a$stats, a$out), 1.22,c(a$stats, a$out) )
 dev.off()
 
