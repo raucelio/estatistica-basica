@@ -18,17 +18,17 @@ grande conjunto de dados, por meio do software R ou Python/Pandas
 
 1. ler bases de dados no formato txt e xls;
 
-2. obter estatísticas descritivas básica para variáveis numericas;
+2. obter estatísticas descritivas básicas para variáveis numéricas;
 
-3. obter freuencias simples e acumuladas para variáveis categoricas e numéricas (discretas e contínuas);
+3. obter frequências simples e acumuladas para variáveis categoricas e numéricas (discretas e contínuas);
 
 4. gerar gráficos de barras, dispersão e boxplot;
 
 5. agregar e ordenar dados;
 
-6. definir serie, dataframe, tupla, lista e dicionário;
+6. definir vetor, dataframe e lista;
 
-7. operar basicamente o jupyter notebook.
+7. operar basicamente o Rstudio.
 
 
 ## Ementa:
@@ -38,7 +38,7 @@ a. Estatística: Descritiva/Inferencial/Probabilística
 
 b. Variáveis quantitativas e qualitativas
 
-c. Software Python
+c. Software R/ Rstudio
 
 a. Conceitos de vetor e data frame
 
@@ -71,6 +71,7 @@ b. Desvio Padrão
 c. Coeficiente de Variação
 
 ### Unidade V: Separatrizes
+
 a. Conceitos
 
 ### Unidade VI: Gráficos
@@ -80,6 +81,7 @@ a. Conceitos
 b. Tipos
 
 ### Unidade VII - Correlação e Regressão
+
 a. Conceitos básicos.
 
 b. Coeficiente de correlação linear.
