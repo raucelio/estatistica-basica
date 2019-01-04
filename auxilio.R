@@ -249,51 +249,67 @@ dev.off()
 ## Grafico do Apendice R
 
 
+
+## Grafico do Apendice R
+
+jpeg("figa2.jpeg",bg="transparent")
 x <- iris[,"Sepal.Width"]
 y <- iris[,"Petal.Width"]
 plot (x, y, type="p", main="PLANTA IRIS", xlab = "Sepal Width", ylab="Petal Width")
+dev.off()
 
+jpeg("figa3.jpeg",bg="transparent")
 x <- iris[,"Sepal.Width"]
 y <- iris[,"Petal.Width"]
 especie <- iris[,"Species"]
 plot (x, y, type="p", main="PLANTA IRIS", xlab = "Sepal Width", ylab="Petal Width")
 text(x,y,labels = especie, cex=0.5,adj=c(0,-1))
-
-# 
-
-
-quantidade <- tapply(rep(1,150), iris["Species"],sum)
-barplot(quantidade, xlab="Esp?cie", ylab="Frequ?ncia")
-
-pie(quantidade)
-
-hist(t(iris["Petal.Width"]), main="Histograma de Petal.Width separado em faixas",
-     xlab = "Petal.Width",bin=10,ylab = "Frequ?ncia")
+dev.off()
 
 x <- iris[,"Sepal.Width"]
 y <- iris[,"Petal.Width"]
 especie <- iris[,"Species"]
+
+jpeg("figa4.jpeg",bg="transparent")
 plot (x, y, type="p", main="PLANTA IRIS", xlab = "Sepal Width", ylab="Petal Width")
 points(x[1:50], y[1:50], col=2, cex=.8,pch=19)
 points(x[51:100], y[51:100], col=3, cex=.8,pch=1)
 points(x[101:150], y[101:150], col=4, cex=.8,pch=19)
-legend(locator(1), c("setosa","versicolor","virginica"), 
+legend(3.5,1.5, c("setosa","versicolor","virginica"), 
        pch=c(19,1,19),col=c(2,3,4), cex=0.8)
+dev.off()
 
-par(mar=c(0,0,0,0))
 X <- rep(1:5,5)
 Y <- rep (5:1,rep(5,5))
-
+jpeg("figa5.jpeg",bg="transparent")
+par(mar=c(0,0,0,0))
 plot(X,Y, pch=1:25,xlim=c(0,6), ylim=c(0,6),
      xlab = "", ylab = "",axes=FALSE)
 text(X,Y, labels = 1:25 , adj = c(1,-1),cex=0.8)
 par(mar=c(5.1,4.1,4.1,2.1))
+dev.off()
 
 x<-iris[,"Sepal.Width"]
-plot(x,type="n",xlab = "?ndice",ylab="Sepal.Width")
-lines(iris["Sepal.Width"])
+jpeg("figa6.jpeg",bg="transparent")
+plot(x,type="l",xlab = "índice",ylab="Sepal.Width")
+dev.off()
 
-summary(iris)
+quantidade <- table(iris["Species"])
+jpeg("figa7.jpeg",bg="transparent")
+barplot(quantidade, xlab="Espécie", ylab="Frequencia", col="white")
+dev.off()
 
-1:60
+quantidade <- table(iris["Species"])
+jpeg("figa8.jpeg",bg="transparent")
+pie(quantidade)
+dev.off()
 
+jpeg("figa9.jpeg",bg="transparent")
+boxplot(iris[,-5], main="",
+     xlab = "",ylab = "")
+dev.off()
+
+jpeg("figa10.jpeg",bg="transparent")
+hist(iris[,"Petal.Width"], main="Histograma de Petal.Width separado em faixas",
+     xlab = "Petal.Width",ylab = "Frequência")
+dev.off()
