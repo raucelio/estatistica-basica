@@ -8,3 +8,6 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + auxilio.R - Programa que gera todas as tabelas e gráficos utilizados na apresentação e notas de aula.
 
++ Estatisita_descritiva_notas_de_aula.pdf - Apresentação com os conceitos básicos de estatística.
+
+ 
