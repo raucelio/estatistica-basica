@@ -20,7 +20,7 @@ teste6 <- paste("http://www.scielo.br",teste5,sep="")
 
 for (i in 1:length(teste6))
 {
-  download.file(teste6[i], destfile = paste("arq",i,".pdf",sep=""))
+  download.file(teste6[i], destfile = paste("arq",i,".pdf",sep=""), mode="wb")
 }
 
 
