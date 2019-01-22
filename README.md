@@ -12,4 +12,5 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + desafio1.R - Programa de scraping que baixa alguns pdf da pagina da Scielo.
 
- 
++ desafio2.R - Programa de scraping que baixa discursos presidenciais da pagina do itamaraty.
+
