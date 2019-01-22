@@ -10,7 +10,7 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + Estatisita_descritiva_notas_de_aula.pdf - Apresentação com os conceitos básicos de estatística.
 
-+ desafio1.R - Programa de scraping que baixa alguns pdf da pagina da Scielo.
++ desafio1.R - Programa de scraping que baixa alguns pdf da página da Scielo.
 
-+ desafio2.R - Programa de scraping que baixa discursos presidenciais da pagina do itamaraty.
++ desafio2.R - Programa de scraping que baixa discursos presidenciais da página do Itamaraty.
 
