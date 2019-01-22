@@ -14,3 +14,9 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + desafio2.R - Programa de scraping que baixa discursos presidenciais da página do Itamaraty.
 
++ Atividade1.R - Programa que faz uma análise descritiva das notas do Enem por escola. São utilizado os seguinte arquivos:
+  
+  + MICRODADOS_ENEM_ESCOLA.csv - Notas e outras informações sobre o desempenho da escola.
+   
+  + Dicionário_Microdados_Enem_Escola.xlsx - Definições das variáveis nos microdados
+
