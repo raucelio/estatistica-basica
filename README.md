@@ -19,5 +19,7 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
   
   + MICRODADOS_ENEM_ESCOLA.csv - Notas e outras informações sobre o desempenho da escola.
    
-  + Dicionário_Microdados_Enem_Escola.xlsx - Definições das variáveis nos microdados
+  + Dicionário_Microdados_Enem_Escola.xlsx - Definições das variáveis nos microdados.
+  
++ Estatistica_Descritiva_Exercicio.pdf - Exercícios focados na linguagem R.
 
