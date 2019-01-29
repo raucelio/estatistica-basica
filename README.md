@@ -8,7 +8,9 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + auxilio.R - Programa que gera todas as tabelas e gráficos utilizados na apresentação e notas de aula.
 
-+ Estatisita_descritiva_notas_de_aula.pdf - Apresentação com os conceitos básicos de estatística.
++ Apresentacao_Estatística.pdf - Apresentação com os conceitos básicos de estatística.
+
++ Apresentacao_R.pdf - Apresentação com os conceitos básicos da linguagem R.
 
 + desafio1.R - Programa de scraping que baixa alguns pdf da página da Scielo.
 
