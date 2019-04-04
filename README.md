@@ -4,6 +4,8 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + **FEIJAO.csv** e **GRAVIDEZ.csv** - bases de dados solicitados nos problemas.
 
++ **imoveis.csv** - São 3782 imóveis anunciados em um site nos anos de 203 e 2014. A primeira linha contém o nome das variáveis e os valores são separados por ponto e vírgula. As invormaçõe são bairro, localização, preço (reais), º de quartos, tamanho ($m^2&), código do corretor, data do anúncio, e preço poo $m^2$.
+
 + planodecurso - Objetivo, ementa, plano de curso e outras informações sobre o curso.
 
 + auxilio.R - Programa que gera todas as tabelas e gráficos utilizados na apresentação e notas de aula.
