@@ -6,6 +6,8 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + **GRAVIDEZ.csv** - duração, em dias, da grávidez observada em 1000 mulheres.
 
++ **ENTORPECENTE.xlsx** - apreensões de maconha e cocaína realizadas por um órgão de segurança.
+
 + **imoveis.csv** - São 3782 imóveis anunciados em um site nos anos de 2013 e 2014. A primeira linha contém o nome das variáveis e os valores são separados por ponto e vírgula. As invormaçõe são bairro, localização, preço (reais), número de quartos, tamanho (m^2), código do corretor, data do anúncio e preço por m^2 (reais).
 
 + planodecurso - Objetivo, ementa, plano de curso e outras informações sobre o curso.
