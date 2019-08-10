@@ -33,5 +33,5 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + **enem_df.RDS** - observações dos candidatos ao ENEM 2017 residentes no DF.
 
-+ **dplyr.RMD** - pequeno tutorial do pacote dplyr.
++ **dplyr.Rmd** - pequeno tutorial do pacote dplyr.
 
