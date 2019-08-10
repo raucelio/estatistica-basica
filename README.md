@@ -31,3 +31,7 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
   
 + Estatistica_Descritiva_Exercicio.pdf - Exercícios focados na linguagem R.
 
++ **enem_df.RDS** - observações dos candidatos ao ENEM 2017 residentes no DF.
+
++ **dplyr.RMD** - pequeno tutorial do pacote dplyr.
+
