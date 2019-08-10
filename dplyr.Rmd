@@ -1,0 +1,233 @@
+---
+title: "Introdução dplyr"
+output: html_notebook
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+options(tibble.print_min = 4L, tibble.print_max = 4L)
+library(dplyr)
+library(ggplot2)
+library(dplyr)
+enem_df <- as_tibble(readRDS("enem_df.RDS"))
+
+set.seed(1014)
+```
+
+Ao trabalhar com dados devemos:
+
+* Planejar toda a atividade.
+
+* Descrever as tarefas em uma linguagem de programação.
+
+* Executar o programa.
+
+
+O pacote  **dplyr**  executa esses passo de forma rápida e fácil:
+
+
+* Ao restringir as opções, ajuda-nos a pensar nos desafios da  manipulação de dados.
+
+* Ao fornecer "verbos", funções que correspondem as tarefas mais comuns de manipulação, para traduzir as tarefas necessárias a análise  em código.
+
+* Backends eficientes gastam menos tempo de processamento do computador.
+
+<!-- Este documento apresenta o conjunto básico de ferramentas do dplyr e mostra como aplicá-las aos quadros de dados. O dplyr também suporta bancos de dados através do pacote dbplyr, uma vez instalado, leia `vignette (" dbplyr ")` para saber mais. -->
+
+## Dados: enem_df 
+
+O banco de dados `enem_df` será utilizado para ilustrar os  verbos disponibilizados pelo **dplyr**. O `enem_df ` é compostos por `r ncol(enem_df)` colunas (variáveis)  e por `r nrow(enem_df)` observções, que representam todos os candidatos do ENEM no ano de 2017 que moram em Brasília.  Os dados de todos de todos os candidatos do ENE e a sua documetação foram obtidos no [INEP microdados](http://www.portal.inep.gov.br/web/guest/microdados).    
+
+
+Os dados em  `enem_df` é uma **tibble**, uma releitura moderna do conceito de **data frame**. Útil em trabalhos com grandes bases de dados. Mais informações sobre tibbles pode ser obtida em  <http://tibble.tidyverse.org>. É possível connverter **data frames** em **tibbles** por meio de `as_tibble()`.
+
+Nesta atividade serão usadas oito 8 vairáveis:
+
+* NU_INSCRICAO - número de inscrição 
+* NU_IDADE     - idade
+* TP_ESCOLA    - 1 não respondeu; 2 pública ; 3 privada e 4 exterior
+* NU_NOTA_CN  - nota de ciências da natureza
+* NU_NOTA_CH  - nota de ciências da humanas
+* NU_NOTA_LC  - nota de linguagem e código
+* NU_NOTA_MT  - nota de matemática
+* NU_NOTA_REDACAO - nota de redação
+
+
+## Verbos
+
+O *dplyr* apresenta um  **verbo** (função) para cada atividade básica de manipulação de dados:
+
+* `filter()` para selecionar observações com base nos seus valores.
+* `arrange()` para ordenar as observações .
+* `select()` e `rename()` para selecionar variáveis com base em seus nomes.
+* `mutate()` e `transmute()` para adicionar novas variavéis que são funções das variáveis existentes.
+* `summarise()` para condensar multiplos valores em um unico valor.
+* `sample_n()` e `sample_frac()` para retirar amostras aleatórias.
+
+### Seleção de  colunas com `select()`
+
+Ao trabalhar com um grande banco de dados com muitas colunas é comum ter interesse em um conjunto menor delas. O verbo `select()`  possibilita de uma forma precisa selecionar um grupo de colunas.
+
+Para selecionar selecionar as variaveis NU_INSCRICAO , NU_IDADE, TP_ESCOLA, NU_NOTA_CN, NU_NOTA_CH, NU_NOTA_LC, NU_NOTA_MT e NU_NOTA_REDACAO.
+
+```{r}
+# Seleciona as variáveis por nome
+#select(enem_df, TP_ENSINO, TP_ESCOLA, NU_NOTA_CN, NU_NOTA_CH, NU_NOTA_LC, NU_NOTA_MT,  NU_NOTA_REDACAO)
+ 
+enem_df = select(enem_df, NU_INSCRICAO, NU_IDADE, TP_ESCOLA, NU_NOTA_CN:NU_NOTA_MT, NU_NOTA_REDACAO)
+
+```
+
+Há funções auxiliares para sere usada com `select()`: `starts_with()`, `ends_with()`, `matches()` e  `contains()`. Essas funções selecionam rapidamente  um conjunto de variáveis que atendem determinado critério. Para  maiores detálhe `?select`.
+
+O  `select()`  pode alterar o nome de uma coluna, para isso indique o novo nome da coluna  como na forma `nome_antigo = nome_novo`, por exemplo:
+
+```{r}
+select(enem_df, INSCRICAO = NU_INSCRICAO)
+```
+
+Entretanto, o  `select()`  exclui todas as variáveis que não foram explicitamente mencionadas. por isso para renomear uma variável  use a função rename `rename()`:
+
+```{r}
+rename(enem_df,  INSCRICAO = NU_INSCRICAO)
+```
+
+
+### Filtrar linhas com `filter()`
+
+`filter()` permite selecionar um subconjunto de observações em um data frame que são verdadeiras (`TRUE`) quando submetidas a uma sentença lógica. Por exemplo, para selecionar  os candidatos com 46 anos o código é:
+
+```{r}
+filter(enem_df, NU_IDADE == 46)
+```
+
+Esse código  é  equivalente aos seguinte comandos em base R:
+
+```{r, eval = FALSE}
+enem_df[enem_df$NU_IDADE == 46, ]
+```
+
+
+
+### Ordenar observações com `arrange()`
+
+`arrange()` ordena  as observações de um  tibble (ou data frame) com base nos valores de um conjunto de vriáveis. Se for indicada mais de uma coluna, cada coluna adicionada será o critério de desempate  para os valores iguais da coluna precedente:
+```{r}
+arrange(enem_df, NU_NOTA_REDACAO)
+```
+
+A função `desc()` ordena a coluna em ordem descedente:
+
+```{r}
+arrange(enem_df, desc(NU_NOTA_REDACAO))
+```
+
+
+### Criando colunas com `mutate()`
+
+O objetivo do verbo  `mutate()` é criar novas colunas a partir de outras colunas do tiblle (ou data frame).
+
+```{r}
+enem_df <- mutate(enem_df,
+           MEDIA =  (NU_NOTA_CN + NU_NOTA_CH + NU_NOTA_LC  + 
+                     NU_NOTA_MT + NU_NOTA_REDACAO)/6
+  
+)
+```
+
+`mutate()` é semelhante à `transform ()` no   R base, mas permite utilizar  a colunas que você acabou de criar:
+
+```{r}
+mutate(enem_df,
+  MEDIA = (NU_NOTA_CN + NU_NOTA_CH + NU_NOTA_LC  + 
+                   NU_NOTA_MT + NU_NOTA_REDACAO)/6,
+  
+  SIT_MT = NU_NOTA_MT/MEDIA
+ 
+)
+```
+
+Caso o objetivo seja criar um novo data frame apenascom  as novas variáveis use a função `transmute()`:
+
+```{r}
+transmute(enem_df,
+  MEDIA = (NU_NOTA_CN + NU_NOTA_CH + NU_NOTA_LC  + 
+                   NU_NOTA_MT + NU_NOTA_REDACAO)/6
+ 
+)
+```
+
+### Resumo de valores com `summarise()`
+
+O verbo é `summarise()` resume  as os valores de um data frame  por meio  do resultado  de uma função.
+
+```{r}
+summarise(enem_df,
+  media = mean(NU_NOTA_REDACAO, na.rm = TRUE)
+)
+```
+
+
+### Amostra aleatórioa de observações com `sample_n()` and `sample_frac()`
+
+Os verbos  `sample_n()` e `sample_frac()` retiram uma amostra aleatória de observações de um data frame. 
+* `sample_n()` retorna uma amotra de tamanho especificado.
+* `sample_frac()` retorna uma amostra com o tamahho específicao com uma fração da polução.
+
+```{r}
+sample_n(enem_df, 12317)
+sample_frac(enem_df, 0.01)
+```
+
+A opção `replace = TRUE` executa uma amostra com reposição. Se necessitar de uma amostra ponderada, o peso amostral deve ser informado pelo argumento `weight`.
+
+
+### Observacões
+
+Note que a sintaxe de todos esses verbos são muito semelhantes:
+
+* O primeiro argumento é um data frame.
+
+* Os argumentos subsequentes descrevem o que fazer com o data frame. 
+
+* Pode-se acessar os valores de uma variável sem usar $.
+
+* O resultado é um novo data frame
+
+Juntas, essas propriedades facilitam a interligação de várias etapas simples para alcançar um resultado complexo.
+
+Esses cinco verbos (funções) fornecem a base de uma linguagem de manipulação de dados. No nível mais básico, é possível alterar um data frame  de cinco maneiras: reordenar as observações (`arrenge ()`), selecionar  observações e variáveis de interesse (`filter ()` e `select ()`. Adicionar novas variáveis que são funções de variáveis existentes (`mutate ()`), ou resumir  muitos valores (`summarize ()`). O restante da linguagem vem da aplicação das cinco funções a diferentes tipos de dados.
+
+
+
+
+### Operações agrupadas
+
+Os verbos dplyr são úteis por si só, mas eles se tornam ainda mais poderoso quando aplicados a grupos de observações de um data frame. No dplyr, isso é possível com a função `group_by ()`. Essa função divide um conjunto de dados em grupos especificos de linhas. Assim, ao aplicar os verbos  ao data frame eles serão automaticamente executados "por grupo".
+
+
+No exemplo a seguir, dividimos as observaçõos em `enem_df` em grupos  identificados pela variável `TP_ESCOLA` ,  resumimos cada tipo de escola pelo contando o número de candidatos (`count = n ()`) e calculando a média geral das notas  (`dist = mean (distance, na.rm = TRUE) `) e atraso de chegada (`media = mean(MEDIA, na.rm = TRUE)`). Em seguida, o ggplot2 para exibir um boxplot para cada grupo.
+
+```{r, warning = FALSE, message = FALSE, fig.width = 7}
+grupo <-group_by(enem_df, TP_ESCOLA)
+summarise(grupo,
+  count = n(),
+  media = mean(MEDIA, na.rm = TRUE)
+  )
+
+
+ggplot(data = enem_df, aes(x=as.character(TP_ESCOLA), y=MEDIA , fill = as.character(TP_ESCOLA))) +
+  geom_boxplot() + 
+  labs(title= "Desempenho por Tipo de Escola", x="Tipo de Escola", y = "Desempenho", fill = "Tipo") 
+  
+
+```
+
+
+O `summarize ()` faz uso de __aggregate functions__, as quais de um conjunto de valores retorna um único valor. O Base R disponibiliza funções desse tipo, por exêmplo: `min ()`, `max ()`, `mean ()`, `sum ()`, `sd ()`, `median ()`, e ` IQR () `. dplyr fornece outras como:
+
+* `n ()`: o número de observações no grupo atual
+
+* `n_distinct (x)`: o número de valores únicos em `x`.
+
+* `primeiro (x)`, `last (x)` e `nth (x, n)` -  que atuam de maneira similar a `x [1]`, `x [length(x)]`, e `x [n]`,póredá a você mais controle sobre o resultado se hover valor faltante.
