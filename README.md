@@ -18,6 +18,9 @@ Estes arquivos são o material teórico e prático do curso de estatística bás
 
 + Apresentacao_R.pdf - Apresentação com os conceitos básicos da linguagem R.
 
++ Apresentacao_dplyr.pdf - Apresentação com os conceitos básicos da linguagem R e do pacote dplyr.
+
+
 + desafio1.R - Programa de scraping que baixa alguns pdf da página da Scielo.
 
 + desafio2.R - Programa de scraping que baixa discursos presidenciais da página do Itamaraty.
