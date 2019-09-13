@@ -6,11 +6,9 @@ Introduzir as noções básicas de estatística. Capacitar o aluno para ler, int
 organizar dados em tabelas e gráficos. Desenvolver a capacidade de interpretação de
 dados estatísticos e análise crítica de informações. Capacitar o aluno calcular medidas
 estatísticas e elaborar gráficos com o objetivo de avaliar as informações contidas em
-grande conjunto de dados, por meio do software R ou Python/Pandas
+grande conjunto de dados, por meio do software R.
 
 ## Garga horária: 16  horas
-
-## Horários: 19:30-20:50 e 21:00-22:30
 
 ## Local: Sala de treinamento da Inferir
 
@@ -26,7 +24,7 @@ grande conjunto de dados, por meio do software R ou Python/Pandas
 
 5. agregar e ordenar dados;
 
-6. definir vetor, dataframe e lista;
+6. definir vetor, dataframe e lista; e
 
 7. operar basicamente o Rstudio.
 
