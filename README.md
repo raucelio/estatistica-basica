@@ -1,5 +1,39 @@
 # Estatística Básica no R
 
+Contéudo
+
+
+R Módulo I
+
++ Instalação do R : Instalar o R e utilizar o Rterm.exe
++ R como calculadora
++ Operadores aritméticos.
++ Operadores Lógicos.
++ Apresentar o conceito de área de trabalho (definir e obter).
++ Apresentar o conceito de vetor e data frame.
++ Funções próprias do R.
++ Obter ajuda.
+
+R Módulo II
+
++ Apresentar o Conceito de pacote (Packeges).
++ Instalação de pacotes (readxl, writexl, dplyr)
++ Leitura e escrita de arquivos textos.
++ Leitura e escrita de arquivos excel.
++ Apresentar o conceito de fator.
++ Apresentar o conceito de Lista.
+
+R Módulo III
+
++ Desvio condicionais no R.
++ Iterações no R: Comandos for e while.
++ Uso de SQL no R (sqldf).
+
+R Módulo IV
+
++ Criando as proprias funções.
+
+
 Estes arquivos são o material teórico e prático do curso de estatística básica.
 
 + **FEIJAO.csv** - aramzena a massa (grama) de 140 grãos de feijao.
