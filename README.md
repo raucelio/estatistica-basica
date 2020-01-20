@@ -59,6 +59,8 @@ Estatística IV
 
 Análise de uma base de dados.
 
+## Recursos
+
 
 Estes arquivos são o material teórico e prático do curso de estatística básica.
 
