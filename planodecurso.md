@@ -2,11 +2,7 @@
 
 ## Objetivo: 
 
-Introduzir as noções básicas de estatística. Capacitar o aluno para ler, interpretar e
-organizar dados em tabelas e gráficos. Desenvolver a capacidade de interpretação de
-dados estatísticos e análise crítica de informações. Capacitar o aluno calcular medidas
-estatísticas e elaborar gráficos com o objetivo de avaliar as informações contidas em
-grande conjunto de dados, por meio do software R.
+> Introduzir a teoria de  Estatística Descritiva e apresentar os primeiros comandos da Linguagem R.Capacitar o aluno a obter os dados, calcular as medidas descritivas basicas e apresentar os dados em forma de tabelas e gráficos, por meio do do software R.
 
 ## Garga horária: 16  horas
 
