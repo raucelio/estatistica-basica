@@ -14,79 +14,79 @@ grande conjunto de dados, por meio do software R.
 
 ## Habilidades: Ao final do curso o aluno será capaz de:
 
-1. ler bases de dados no formato txt e xls;
+1. Ler bases de dados no formato txt e xls.
 
-2. obter estatísticas descritivas básicas para variáveis numéricas;
+2. Obter estatísticas descritivas básicas para variáveis numéricas.
 
-3. obter frequências simples e acumuladas para variáveis categoricas e numéricas (discretas e contínuas);
+3. Obter frequências simples e acumuladas para variáveis categoricas e numéricas (discretas e contínuas).
 
-4. gerar gráficos de barras, dispersão e boxplot;
+4. Gerar gráficos de barras, dispersão e boxplot.
 
-5. agregar e ordenar dados;
+5. Agregar, ordenar, modificar e criar variáveis.
 
-6. definir vetor, dataframe e lista; e
+6. Selecionar variáveis e observações.
 
-7. operar basicamente o Rstudio.
+7. Definir vetor, dataframe e lista.
+
+8. Utilizar a claúsula SELECT da linguagem SQL.
 
 
 ## Ementa:
 
-### Unidade I
-a. Estatística: Descritiva/Inferencial/Probabilística
 
-b. Variáveis quantitativas e qualitativas
+R Módulo I
 
-c. Software R/ Rstudio
++ Instalação do R : Instalar o R e utilizar o Rterm.exe
++ R como calculadora
++ Operadores aritméticos.
++ Operadores Lógicos.
++ Apresentar o conceito de área de trabalho (definir e obter).
++ Apresentar o conceito de vetor e data frame.
++ Funções próprias do R.
++ Obter ajuda.
 
-a. Conceitos de vetor e data frame
+R Módulo II
 
-b. Funções estatísticas
++ Apresentar o Conceito de pacote (Packeges).
++ Instalação de pacotes (readxl, writexl, dplyr)
++ Leitura e escrita de arquivos textos.
++ Leitura e escrita de arquivos excel.
++ Apresentar o conceito de fator.
++ Apresentar o conceito de Lista.
 
-c. Funções gráficas
+R Módulo III
 
-### Unidade II: Tipos de dados
++ Desvio condicionais no R.
++ Iterações no R: Comandos for e while.
++ Uso de SQL no R (sqldf).
 
-a. Dados Brutos Rol;
+R Módulo IV
 
-b. Variável quantitativa/qualitativa;
++ Criando as proprias funções.
 
-c. Frequência: Simples, Relativa, Acumulada e Relativa acumulada
+Estatística I
 
-d. Histograma
++ Definindo estatística Descritiva
++ Tipos de variáveis
++ Criando vetores
++ Criando data frames.
++ Somatórios e Produtórios.
++ Tabelas de Frequências.
++ Gráfico de Barras.
 
-#### Unidade III: Medidas de Tendência Central
+Estatística II
 
-a. Média
++ Média, Moda e Mediana.
++ Separatrizes.
++ Gráfico de Caixas (Boxplot).
 
-b. Moda
+Estatística III
 
-### Unidade IV: Medidas de Dispersão
++ Variância, Desvio-padrão.
++ Grafico de Dispersão.
++ Correlação.
 
-a. Variância
+Estatística IV
 
-b. Desvio Padrão
-
-c. Coeficiente de Variação
-
-### Unidade V: Separatrizes
-
-a. Conceitos
-
-### Unidade VI: Gráficos
-
-a. Conceitos
-
-b. Tipos
-
-### Unidade VII - Correlação e Regressão
-
-a. Conceitos básicos.
-
-b. Coeficiente de correlação linear.
-
-c. Retas de Regressão. Proporção de variação explicada. Outros
-coeficientes de regressão
-
-d. Aplicações.
-
+Análise de uma base de dados.
 
