@@ -1,6 +1,6 @@
 # Estatística Básica no R
 
-## Contéudo
+## Conteúdo
 
 
 R Módulo I
