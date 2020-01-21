@@ -2,7 +2,7 @@
 
 ## Objetivo: 
 
-> Introduzir a teoria de  Estatística Descritiva e apresentar os primeiros comandos da Linguagem R.Capacitar o aluno a obter os dados, calcular as medidas descritivas basicas e apresentar os dados em forma de tabelas e gráficos, por meio do do software R.
+> Apresentar todo ciclo de obtenção de informação a partir de uma massa de dados por meio da Estatística Descritiva e com o uso  Linguagem R.
 
 ## Garga horária: 16  horas
 
@@ -33,8 +33,9 @@
 R Módulo I
 
 + Instalação do R : Instalar o R e utilizar o Rterm.exe
-+ R como calculadora
-+ Operadores aritméticos.
++ R como calculadora.
++ Tipos de dados.
++ Operadores Aritméticos.
 + Operadores Lógicos.
 + Apresentar o conceito de área de trabalho (definir e obter).
 + Apresentar o conceito de vetor e data frame.
