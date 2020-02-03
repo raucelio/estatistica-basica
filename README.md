@@ -8,7 +8,7 @@ R Módulo I
 + Instalar o R.
 + R como calculadora.
 + Operadores aritméticos.
-+ Operadores Lógicos.
++ Operadores lógicos.
 + Apresentar o conceito de área de trabalho (definir e obter).
 + Apresentar o conceito de vetor e data frame.
 + Funções próprias do R.
