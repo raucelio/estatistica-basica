@@ -5,8 +5,8 @@
 
 R Módulo I
 
-+ Instalação do R : Instalar o R e utilizar o Rterm.exe
-+ R como calculadora
++ Instalar o R.
++ R como calculadora.
 + Operadores aritméticos.
 + Operadores Lógicos.
 + Apresentar o conceito de área de trabalho (definir e obter).
@@ -37,8 +37,6 @@ Estatística I
 
 + Definindo estatística Descritiva
 + Tipos de variáveis
-+ Criando vetores
-+ Criando data frames.
 + Somatórios e Produtórios.
 + Tabelas de Frequências.
 + Gráfico de Barras.
@@ -48,6 +46,7 @@ Estatística II
 + Média, Moda e Mediana.
 + Separatrizes.
 + Gráfico de Caixas (Boxplot).
++ Gráfico Histograma.
 
 Estatística III
 
